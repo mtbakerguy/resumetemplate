@@ -1,0 +1,57 @@
+#+TITLE: A simple resume generator
+#+OPTIONS: author:nil date:nil
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+#+LATEX_HEADER: \usepackage{parskip}
+* Problem Statement
+If you've ever had to maintain a resume, it's often tedious and inconvenient to customize for multiple positions.  To solve this, it makes sense to start with a [[https://www.latextemplates.com/][template]] and generate resumes with different content.  This small bit of code was created to help me do this.  While Furthermore, in my experience, combining templates with document generation is the simplest way to ensure consistent formatting.  To this end, I've created some simple macros that you can use to build a resume.  To best fake advantage of these macros, you'll need three things:
++ an installation of the [[https://www.gnu.org/software/m4/m4.html][m4]] macro processor to build the input for the document.
++ an installation of the [[https://www.latex-project.org/][LaTeX]] document preparation system.
++ an installation of the [[https://www.gnu.org/software/make/manual/make.html][GNU Make]] utility.
+* Initial Customization
+** Setup the files to build
+After you've checked out the source, you'll want to start by writing a custom =Makefile.inc.=  It will look something like the following:
+
+#+BEGIN_EXAMPLE
+FILES = architect.pdf techlead.pdf
+
+NAME='Frumious Bandersnatch'
+ADDRESS='123 \\ Tulgey Wood \\ (424) 242-4242 \\ vorpal.blade@thelookingglass.net'
+#+END_EXAMPLE
+
+In the previous example, we are creating different resumes for an architect and technical lead role.  Likewise, you've customized the name and address on the resume and they'll format almost effortlessly.
+** Customize the sections
+By default, I've setup the resume to have the following sections:
++ **OBJECTIVE**
++ **PROFESSIONAL EXPERIENCE**
++ **EDUCATION**
++ **TECHNICAL SKILLS**
++ **INTERESTS**
+
+In the =resume.m4= file, you can see the each of these areas setup using the =Section= macro.  This macro takes two arguments:
++ the section name (e.g. /OBJECTIVE/)
++ text that will be expanded in the body of the macro.  To make editing easier, I intend that a user have a separate file for each section except the /OBJECTIVE/ section as that section is customized with the file that sets up in the initial environment for per resume customization.
+
+I have included the following example for clarification for the technical lead position (the file **must** be named /techlead.m4/ to ensure /make/ works correctly):
+
+#+BEGIN_EXAMPLE
+define(Objective,Find a technical lead position that makes me a cheshire cat.
+include(`resume.m4')
+#+END_EXAMPLE
+
+A couple of important notes for the file above:
++ the =include(`resume.m4')= isn't optional as that's what ensures the larger resume gets formatted.
++ the =`'= characters used for quoting are only used until =resume.m4= is included.  After that, all quoting is done with a more conventional [[https://www.gnu.org/software/autoconf/manual/autoconf.html][autoconf]] pattern of =[]=.
+
+Finally, while it's expected that the most common application of a different file is to create custom =Objective= macros, this is also th entry point for any other conditional customization a user may need[fn::Currently, there is only one additional customization supported--the =Font= macro which can be set to switch to a different font from the default /Helvetica./]
+** Other files to customize
+Without editing the default /resume.m4,/ you can customize the following files:
++ /positions.m4/
++ /education.m4/
++ /technicalskills.m4/
++ /interests.m4/
+
+Each of these files can be formatted any way you'd like.  To make like easier, I have created helper macros (see the beginning of /resume.m4/) to make it easier to format content.  Once you've put this minimal skeleton together, you can essentially forget about formatting and focus on making your content compelling and 
+* Generating the resume(s)
+After you've done your customizations, you'll want to generate your resume(s) using the following command:  =make=
+
+If you've done things correctly, you'll end up with consistently formatted [[https://en.wikipedia.org/wiki/PDF][PDF]] files generated from [[https://www.github.com][easily maintained]] sources. 
