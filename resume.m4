@@ -58,8 +58,8 @@ ifdef([Font],\usepackage{Font},\usepackage{helvet}) % default to helvetica
 Center([{\bf [Address]} \\ Address])
 Section(OBJECTIVE,[Objective])
 Section(PROFESSIONAL EXPERIENCE,[include([positions.m4])])
-Section(EDUCATION,[include([education.m4])])
 Section(TECHNICAL SKILLS,[include([technicalskills.m4])])
+Section(EDUCATION,[include([education.m4])])
 Section(INTERESTS,[include([interests.m4])])
 \end{resume} 
 \end{document}
