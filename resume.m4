@@ -14,6 +14,7 @@ $2
 \vspace{0.2in} % Some whitespace between sections
 )dnl
 define([Bullet],\item $1)dnl
+define([Center],\begin{center} $1 \end{center})dnl
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Long Professional Curriculum Vitae
@@ -53,9 +54,8 @@ ifdef([Font],\usepackage{Font},\usepackage{helvet}) % default to helvetica
 
 \begin{resume}
 \vspace{-18pt}
-\begin{center}
-{\bf [Address]} \\ Address
-\end{center}
+
+Center([{\bf [Address]} \\ Address])
 Section(OBJECTIVE,[Objective])
 Section(PROFESSIONAL EXPERIENCE,[include([positions.m4])])
 Section(EDUCATION,[include([education.m4])])
