@@ -1,5 +1,5 @@
 changequote([,])dnl
-define([List],\begin{itemize} \itemsep -2pt [$1] \end{itemize})dnl
+define([List],$2 \begin{itemize} \itemsep -2pt [$1] \end{itemize})dnl
 define([SmallSpace],\vspace{-6pt})dnl
 define([Degree],{\sl $1}[,] $2 \\ $3 \hfill $4)dnl
 define([Position],{\sl $1} \hfill $2 \\ $3 
