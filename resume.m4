@@ -5,7 +5,7 @@ define([Degree],{\sl $1}[,] $2 \\ $3 \hfill $4)dnl
 define([Position],{\sl $1} \hfill $2 \\ $3 
 [ifelse($4,[],[\\],[$4])])dnl
 define([Company],{\sl $1} \hfill $2 \\)dnl
-define([SubPosition],$4 $1 \hfill $2
+define([SubPosition],[SmallSpace] $1 \hfill $2
 $3)dnl
 define([Section],
 \section{\centerline{$1}}
