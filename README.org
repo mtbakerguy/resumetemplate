@@ -3,7 +3,7 @@
 #+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
 #+LATEX_HEADER: \usepackage{parskip}
 * Problem Statement
-If you've ever had to maintain a resume, it's often tedious and inconvenient to customize for multiple positions.  To solve this, it makes sense to start with a [[https://www.latextemplates.com/][template]] and generate resumes with different content.  This small bit of code was created to help me do this.  While Furthermore, in my experience, combining templates with document generation is the simplest way to ensure consistent formatting.  To this end, I've created some simple macros that you can use to build a resume.  To best fake advantage of these macros, you'll need three things:
+If you've ever had to maintain a resume, it's often tedious and inconvenient to customize for multiple positions.  To solve this, it makes sense to start with a [[https://www.latextemplates.com/][template]] and generate resumes with different content.  This small bit of code was created to help me do this.  Furthermore, in my experience, combining templates with document generation is the simplest way to ensure consistent formatting.  To this end, I've created some simple macros that you can use to build a resume.  To best fake advantage of these macros, you'll need three things:
 + an installation of the [[https://www.gnu.org/software/m4/m4.html][m4]] macro processor to build the input for the document.
 + an installation of the [[https://www.latex-project.org/][LaTeX]] document preparation system.
 + an installation of the [[https://www.gnu.org/software/make/manual/make.html][GNU Make]] utility.
