@@ -1,6 +1,6 @@
 include Makefile.inc
 
-%.tex : %.m4 resume.m4
+%.tex : %.m4  *.m4
 	m4 -DName=$(NAME) -DAddress=$(ADDRESS) $< > $@
 
 %.pdf : %.tex
