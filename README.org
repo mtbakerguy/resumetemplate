@@ -50,7 +50,7 @@ Without editing the default /resume.m4,/ you can customize the following files:
 + /technicalskills.m4/
 + /interests.m4/
 
-Each of these files can be formatted any way you'd like.  To make like easier, I have created helper macros (see the beginning of /resume.m4/) to make it easier to format content.  Once you've put this minimal skeleton together, you can essentially forget about formatting and focus on making your content compelling and engaging.
+Each of these files can be formatted any way you'd like including breaking a single file into multiples.  To facilitate this, I have created helper macros (see the beginning of /resume.m4/) to assist you in formatting content.  Once you've put this minimal skeleton together, you can almost ignore formatting and focus on making your content compelling and engaging.
 
 *** Where and How to Edit Files
 To make managing your files easier, the /Makefile/ contains a =DIR= environment variable[fn::Why?  It enables you to clone this repository while keeping your personal data in a separate, private repository.] that defaults to =private.=  You should customize this setting to your setup.
