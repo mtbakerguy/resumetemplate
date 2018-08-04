@@ -51,7 +51,41 @@ Without editing the default /resume.m4,/ you can customize the following files:
 + /interests.m4/
 
 Each of these files can be formatted any way you'd like.  To make like easier, I have created helper macros (see the beginning of /resume.m4/) to make it easier to format content.  Once you've put this minimal skeleton together, you can essentially forget about formatting and focus on making your content compelling and 
+
+** Adding another section
+If you want to add another section, you'll need to update /resume.m4/ directly and then add the new content by creating a corresponding =sectionfilename.m4= file.
+
+Adding sections is easy and looks something like the following:
+
+#+begin_example
+Section(NEW SECTION,[include([mynewsection.m4])])
+#+end_example
+
+While the content of this section can be anthing renderable by /LaTeX,/ I recommend keeping the file as clean as possible by adding formatting macros to /resume.m4./  Why bother?  It does the following:
++ ensures content is consistently formatted.
++ easier to edit as complicated constructs are in one area.
++ makes global changes trivial.
++ allows you to have consistent primitives between files.
+
 * Generating the resume(s)
 After you've done your customizations, you'll want to generate your resume(s) using the following command:  =make=
 
 If you've done things correctly, you'll end up with consistently formatted [[https://en.wikipedia.org/wiki/PDF][PDF]] files generated from [[https://www.github.com][easily maintained]] sources. 
+* Current macros
+All macros are described below:
+
+#+LATEX: {\tiny
+|-------------+---------------------------------+---------------------+-------------------------------------+-------------------|
+| Macro       | Function                        | Number of Arguments | Arguments                           | Notes             |
+|-------------+---------------------------------+---------------------+-------------------------------------+-------------------|
+| List        | format an itemized list         |                   2 | list content, preamble              | $2 is seldom used |
+| SmallSpace  | reduce the vertical space       |                   0 |                                     |                   |
+| Degree      | format an education stanza      |                   4 | degree, major, school, date         |                   |
+| Position    | format a simple position stanza |                   4 | company,date,title,responsibilities |                   |
+| Company     | format a company stanza         |                   2 | company, location                   |                   |
+| SubPosition | format a position in a company  |                   3 | title,date,responsibilities         |                   |
+| Bullet      | add a bullet                    |                   1 | content                             |                   |
+| Center      | center the content              |                   1 | content                             |                   |
+| Section     | define a resume section         |                   1 | content                             |                   |
+|-------------+---------------------------------+---------------------+-------------------------------------+-------------------|
+#+LATEX: }
