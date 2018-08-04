@@ -9,7 +9,7 @@ If you've ever had to maintain a resume, it's often tedious and inconvenient to 
 + an installation of the [[https://www.gnu.org/software/make/manual/make.html][GNU Make]] utility.
 * Initial Customization
 ** Setup the files to build
-After you've checked out the source, you'll want to start by writing a custom =Makefile.inc.=  It will look something like the following:
+After you've checked out the source, you'll want to start by writing a custom /Makefile.inc./  It will look something like the following:
 
 #+BEGIN_EXAMPLE
 FILES = architect.pdf techlead.pdf
@@ -18,7 +18,7 @@ NAME='Frumious Bandersnatch'
 ADDRESS='123 \\ Tulgey Wood \\ (424) 242-4242 \\ vorpal.blade@thelookingglass.net'
 #+END_EXAMPLE
 
-In the previous example, we are creating different resumes for an architect and technical lead role.  Likewise, you've customized the name and address on the resume and they'll format almost effortlessly.
+In the previous example, we are creating different resumes for an architect and technical lead role.  Likewise, you've customized the name and address on the resume and they'll format almost effortlessly.  Finally, you should understand that the top-level /Makefile/ has variable--=DIR=--that can be used to customize the location of your /Makefile.inc./
 ** Customize the sections
 By default, I've setup the resume to have the following sections:
 + **OBJECTIVE**
@@ -27,7 +27,7 @@ By default, I've setup the resume to have the following sections:
 + **TECHNICAL SKILLS**
 + **INTERESTS**
 
-In the =resume.m4= file, you can see the each of these areas setup using the =Section= macro.  This macro takes two arguments:
+In the /resume.m4/ file, you can see the each of these areas setup using the =Section= macro.  This macro takes two arguments:
 + the section name (e.g. /OBJECTIVE/)
 + text that will be expanded in the body of the macro.  To make editing easier, I intend that a user have a separate file for each section except the /OBJECTIVE/ section as that section is customized with the file that sets up in the initial environment for per resume customization.
 
@@ -50,7 +50,10 @@ Without editing the default /resume.m4,/ you can customize the following files:
 + /technicalskills.m4/
 + /interests.m4/
 
-Each of these files can be formatted any way you'd like.  To make like easier, I have created helper macros (see the beginning of /resume.m4/) to make it easier to format content.  Once you've put this minimal skeleton together, you can essentially forget about formatting and focus on making your content compelling and 
+Each of these files can be formatted any way you'd like.  To make like easier, I have created helper macros (see the beginning of /resume.m4/) to make it easier to format content.  Once you've put this minimal skeleton together, you can essentially forget about formatting and focus on making your content compelling and engaging.
+
+*** Where and How to Edit Files
+To make managing your files easier, the /Makefile/ contains a =DIR= environment variable[fn::Why?  It enables you to clone this repository while keeping your personal data in a separate, private repository.] that defaults to =private.=  You should customize this setting to your setup.
 
 ** Adding another section
 If you want to add another section, you'll need to update /resume.m4/ directly and then add the new content by creating a corresponding =sectionfilename.m4= file.

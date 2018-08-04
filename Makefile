@@ -1,7 +1,10 @@
-include Makefile.inc
+# location of your personal files
+DIR=private
 
-%.tex : %.m4  *.m4
-	m4 -DName=$(NAME) -DAddress=$(ADDRESS) $< > $@
+include $(DIR)/Makefile.inc
+
+%.tex : $(DIR)/%.m4  $(DIR)/*.m4 resume.m4
+	m4 -DDirectory=$(DIR) -DName=$(NAME) -DAddress=$(ADDRESS) $< > $@
 
 %.pdf : %.tex
 	pdflatex $<
