@@ -75,17 +75,18 @@ If you've done things correctly, you'll end up with consistently formatted [[htt
 All macros are described below:
 
 #+LATEX: {\tiny
-|-------------+---------------------------------+---------------------+-------------------------------------+-------------------|
-| Macro       | Function                        | Number of Arguments | Arguments                           | Notes             |
-|-------------+---------------------------------+---------------------+-------------------------------------+-------------------|
-| List        | format an itemized list         |                   2 | list content, preamble              | $2 is seldom used |
-| SmallSpace  | reduce the vertical space       |                   0 |                                     |                   |
-| Degree      | format an education stanza      |                   4 | degree, major, school, date         |                   |
-| Position    | format a simple position stanza |                   4 | company,date,title,responsibilities |                   |
-| Company     | format a company stanza         |                   2 | company, location                   |                   |
-| SubPosition | format a position in a company  |                   3 | title,date,responsibilities         |                   |
-| Bullet      | add a bullet                    |                   1 | content                             |                   |
-| Center      | center the content              |                   1 | content                             |                   |
-| Section     | define a resume section         |                   1 | content                             |                   |
-|-------------+---------------------------------+---------------------+-------------------------------------+-------------------|
+|-------------+---------------------------------+---------------------+-------------------------------------+---------------------|
+| Macro       | Function                        | Number of Arguments | Arguments                           | Notes               |
+|-------------+---------------------------------+---------------------+-------------------------------------+---------------------|
+| List        | format an itemized list         |                   2 | list content, preamble              | $2 is seldom used   |
+| SmallSpace  | reduce the vertical space       |                   0 |                                     |                     |
+| Degree      | format an education stanza      |                   4 | degree, major, school, date         |                     |
+| Position    | format a simple position stanza |                   4 | company,date,title,responsibilities |                     |
+| Company     | format a company stanza         |                   2 | company, location                   |                     |
+| SubPosition | format a position in a company  |                   3 | title,date,responsibilities         |                     |
+| Bullet      | add a bullet                    |                   1 | content                             |                     |
+| Center      | center the content              |                   1 | content                             |                     |
+| SkipLine    | linefeed                        |                   1 | content                             | preceded by newline |
+| Section     | define a resume section         |                   1 | content                             |                     |
+|-------------+---------------------------------+---------------------+-------------------------------------+---------------------|
 #+LATEX: }
