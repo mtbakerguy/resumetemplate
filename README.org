@@ -61,7 +61,7 @@ Adding sections is easy and looks something like the following:
 Section(NEW SECTION,[include([mynewsection.m4])])
 #+end_example
 
-While the content of this section can be anthing renderable by /LaTeX,/ I recommend keeping the file as clean as possible by adding formatting macros to /resume.m4./  Why bother?  It does the following:
+While the content of this section can be anything renderable by /LaTeX,/ I recommend keeping the file as clean as possible by adding formatting macros to /resume.m4./  Why bother?  It does the following:
 + ensures content is consistently formatted.
 + easier to edit as complicated constructs are in one area.
 + makes global changes trivial.
