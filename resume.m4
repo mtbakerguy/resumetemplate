@@ -16,6 +16,7 @@ $2
 define([Bullet],\item $1)dnl
 define([Center],\begin{center} $1 \end{center})dnl
 define([SkipLine],\\ $1)dnl
+define([Italicize],\textit{$1})dnl
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Long Professional Curriculum Vitae

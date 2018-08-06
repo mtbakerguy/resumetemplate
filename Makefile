@@ -1,5 +1,5 @@
 # location of your personal files
-DIR=private
+DIR=resume
 
 include $(DIR)/Makefile.inc
 

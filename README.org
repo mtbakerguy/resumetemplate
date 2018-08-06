@@ -53,7 +53,7 @@ Without editing the default /resume.m4,/ you can customize the following files:
 Each of these files can be formatted any way you'd like including breaking a single file into multiples.  To facilitate this, I have created helper macros (see the beginning of /resume.m4/) to assist you in formatting content.  Once you've put this minimal skeleton together, you can almost ignore formatting and focus on making your content compelling and engaging.
 
 *** Where and How to Edit Files
-To make managing your files easier, the /Makefile/ contains a =DIR= environment variable[fn::Why?  It enables you to clone this repository while keeping your personal data in a separate, private repository.] that defaults to =private.=  You should customize this setting to your setup.
+To make managing your files easier, the /Makefile/ contains a =DIR= environment variable[fn::Why?  It enables you to clone this repository while keeping your personal data in a separate, private repository.] that defaults to =resume.=  You should customize this setting to your setup.
 
 ** Adding another section
 If you want to add another section, you'll need to update /resume.m4/ directly and then add the new content by creating a corresponding =sectionfilename.m4= file.
@@ -89,6 +89,7 @@ All macros are described below:
 | SubPosition | format a position in a company  |                   3 | title,date,responsibilities         |                     |
 | Bullet      | add a bullet                    |                   1 | content                             |                     |
 | Center      | center the content              |                   1 | content                             |                     |
+| Italicize`  | italicize all content           |                   1 | content                             |                     |
 | SkipLine    | linefeed                        |                   1 | content                             | preceded by newline |
 | Section     | define a resume section         |                   1 | content                             |                     |
 |-------------+---------------------------------+---------------------+-------------------------------------+---------------------|
