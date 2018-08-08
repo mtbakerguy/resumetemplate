@@ -89,7 +89,8 @@ All macros are described below:
 | SubPosition | format a position in a company  |                   3 | title,date,responsibilities         |                     |
 | Bullet      | add a bullet                    |                   1 | content                             |                     |
 | Center      | center the content              |                   1 | content                             |                     |
-| Italicize`  | italicize all content           |                   1 | content                             |                     |
+| I__         | /italicize all content/         |                   1 | content                             |                     |
+| B__         | **bold all content**            |                   1 | content                             |                     |
 | SkipLine    | linefeed                        |                   1 | content                             | preceded by newline |
 | Section     | define a resume section         |                   1 | content                             |                     |
 |-------------+---------------------------------+---------------------+-------------------------------------+---------------------|
