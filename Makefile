@@ -14,7 +14,8 @@ all:    $(FILES)
 wordcloud.pdf: wordcloud.m4 wordcloud.r $(DIR)/*.m4
 	m4 -DDirectory=$(DIR) $< $(DIR)/*.m4 | tr ' ' '\n' > words.txt
 	./wordcloud.r
+	rm -fr words.txt
 
 clean:
-	rm -fr *.pdf *.log *.tex
+	rm -fr *.pdf *.log *.tex words.txt
 
