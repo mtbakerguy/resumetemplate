@@ -34,8 +34,7 @@ In the /resume.m4/ file, you can see the each of these areas setup using the =Se
 I have included the following example for clarification for the technical lead position (the file **must** be named /techlead.m4/ to ensure /make/ works correctly):
 
 #+BEGIN_EXAMPLE
-define(Objective,Find a technical lead position that makes me a cheshire cat.
-include(`resume.m4')
+find a technical lead position that makes me a cheshire cat.
 #+END_EXAMPLE
 
 A couple of important notes for the file above:
