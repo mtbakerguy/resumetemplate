@@ -11,6 +11,10 @@ include $(DIR)/Makefile.inc
 
 all:    $(FILES)
 
+wordcloud.pdf: wordcloud.m4 wordcloud.r $(DIR)/*.m4
+	m4 -DDirectory=$(DIR) $< $(DIR)/*.m4 | tr ' ' '\n' > words.txt
+	./wordcloud.r
+
 clean:
 	rm -fr *.pdf *.log *.tex
 
