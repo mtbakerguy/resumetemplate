@@ -98,8 +98,11 @@ All macros are described below:
 The /Makefile/ also contains the ability to generate a wordcloud from your resume.  To do this, you need to run the following command:
 =make wordcloud.pdf=
 
-Because this adds another two dependencies:
+Because this creates additional dependencies:
+
 + [[https://www.r-project.org/][R]]
-+ R's /wordcloud/ library (type the following at the runtime prompt: =install.packages('wordcloud')=)
++ Several /R/ libraries (installed with some variant of =install.packages('packagename')= in the REPL.
+  + /wordcloud/
+  + /tm/
 
 /wordcloud.pdf/ is not built by default.
